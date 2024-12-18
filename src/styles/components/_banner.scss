@@ -1,0 +1,29 @@
+@use "../base/variables" as vars;
+@use "../utilities/mixins" as mx;
+@use "../utilities/functions" as f;
+
+.banner {
+  position: relative;
+  background-image: url("/banner__home.webp");
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+
+  &__overlay {
+    @include mx.flex-center(column, no-wrap);
+    text-align: center;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  &__title {
+    font-family: vars.$font-family-titles;
+    font-size: f.get-font(heading);
+    color: f.get-color(primary);
+    margin-bottom: 1rem;
+
+    span {
+      color: f.get-color(secondary);
+    }
+  }
+}

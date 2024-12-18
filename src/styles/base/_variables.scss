@@ -1,0 +1,32 @@
+@use "sass:color";
+
+$colors: (
+  "primary": #d4af37,
+  "primary-hover": color.scale(#d4af37, $lightness: 10%),
+  "secondary": #f4f4f4,
+  "neutral": #333333,
+  "accent-dark": #8b4513,
+  "background": #111111,
+  "overlay": rgba(0, 0, 0, 0.6),
+  "border": #e0e0e0,
+);
+
+$font-family-titles: "Playfair Display", sans-serif;
+$font-family-base: "Montserrat", sans-serif;
+
+$fonts-sizes: (
+  "small": 0.875rem,
+  "base": 1rem,
+  "medium": 1.25rem,
+  "large": 1.5rem,
+  "heading": 2.5rem,
+  "display": 4rem,
+);
+
+$breakpoints: (
+  "x-small": 480px,
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "x-large": 1200px,
+);

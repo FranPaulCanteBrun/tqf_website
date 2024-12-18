@@ -1,0 +1,11 @@
+@use "../utilities/functions" as f;
+
+.home__title {
+  text-align: center;
+  font-size: f.get-font(heading);
+  margin-top: 1.5rem;
+}
+
+p {
+  text-align: center;
+}

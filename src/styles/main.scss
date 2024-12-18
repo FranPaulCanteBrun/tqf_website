@@ -1,0 +1,25 @@
+// Utilities
+@use "utilities/mixins";
+@use "utilities/functions";
+
+// Global Styles
+@use "base/reset";
+@use "base/variables";
+@use "base/globals";
+
+// Layout Styles
+@use "layout/header";
+@use "layout/footer";
+@use "layout/grid";
+@use "layout/navbar";
+
+// Components Styles
+@use "components/button";
+@use "components/card";
+@use "components/banner";
+@use "components/payment-banner";
+
+// Pages Styles
+@use "pages/home";
+@use "pages/catalog";
+@use "pages/contact";

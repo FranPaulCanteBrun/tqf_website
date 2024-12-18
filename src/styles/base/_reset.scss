@@ -1,0 +1,41 @@
+@use "sass:map";
+@use "variables" as vars;
+@use "../utilities/functions" as f;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  font-family: vars.$font-family-base;
+  line-height: 1.6;
+  background-color: f.get-color(secondary);
+  color: f.get-color(neutral);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}

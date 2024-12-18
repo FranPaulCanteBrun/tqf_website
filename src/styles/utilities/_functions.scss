@@ -1,0 +1,14 @@
+@use "../base/variables" as vars;
+@use "sass:map";
+
+@function get-color($name) {
+  @return map.get(vars.$colors, $name);
+}
+
+@function get-font($name) {
+  @return map.get(vars.$fonts-sizes, $name);
+}
+
+@function get-breakpoint($name) {
+  @return map.get(vars.$breakpoints, $name);
+}

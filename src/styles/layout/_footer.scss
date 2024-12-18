@@ -1,0 +1,24 @@
+@use "../utilities/functions" as f;
+
+.footer {
+  background-color: f.get-color(neutral);
+  color: f.get-color(secondary);
+  padding: 1rem;
+  text-align: center;
+
+  &__socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      color: f.get-color(primary);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+---
+import "../styles/main.scss";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width", initial-scale="1"/>
+		<link rel="icon" type="image/svg+xml" href="../assets/logo-topqualityflooring.webp" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Essentials -->
+		<title>Top Quality Flooring - Premium Flooring Solutions</title>
+		<meta name="description" content="Discover premium flooring solutions at Top Quality Flooring. Explore our catalog for hardwood, vinyl, and tile options. Get in touch for expert installation and quotes."/>
+		<meta name="keywords" content="flooring, hardwood floors, vinyl floors, tile installation, South Carolina flooring, quality flooring solutions"/>
+		<link rel="canonical" href="https://www.topqualityflooring.com/"/>
+
+		<!-- Open Graph Meta Tags for Social Sharing -->
+		<meta property="og:title" content="Top Quality Flooring - Premium Flooring Solutions" />
+		<meta property="og:description" content="Discover premium flooring solutions at Top Quality Flooring. Explore our catalog for hardwood, vinyl, and tile options. Get in touch for expert installation and quotes.">
+		<meta property="og:image" content="../assets/logo-topqualityflooring.webp" />
+        <meta property="og:url" content="https://www.topqualityflooring.com/" />
+        <meta property="og:type" content="website" />
+
+		<!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Top Quality Flooring - Premium Flooring Solutions" />
+        <meta name="twitter:description" content="Discover premium flooring solutions at Top Quality Flooring. Explore our catalog for hardwood, vinyl, and tile options. Get in touch for expert installation and quotes." />
+        <meta name="twitter:image" content="../assets/logo-topqualityflooring.webp" /> 
+
+		<!-- Preloading Critical Assets -->
+        <link rel="preload" href="../assets/logo-topqualityflooring.webp" as="image" type="image/webp" />
+		
+	</head>
+	<body>
+		<Navbar />
+		<main role="main" aria-label="Main content area">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

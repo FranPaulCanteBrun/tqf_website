@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../base/variables" as vars;
+@use "functions" as f;
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: f.get-breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @media (max-width: f.get-breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin flex-center(
+  $direction: row,
+  $cut: no-wrap,
+  $justify: center,
+  $align: center
+) {
+  display: flex;
+  flex-flow: $direction $cut;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin container($max-width: 1200px, $padding: 1rem) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding;
+}
+
+@mixin spacing($size: 1rem) {
+  margin: $size;
+  padding: $size;
+}

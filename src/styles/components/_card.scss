@@ -1,0 +1,9 @@
+@use "../utilities/functions" as f;
+
+.card {
+  border: 1px solid f.get-color(neutral);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: f.get-color(secondary);
+}

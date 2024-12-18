@@ -1,0 +1,42 @@
+@use "../base/variables" as vars;
+@use "../utilities/mixins" as mx;
+@use "../utilities/functions" as f;
+
+.payment-banner {
+  background-color: f.get-color(neutral);
+  color: f.get-color(secondary);
+  padding: 1.5rem 1rem;
+
+  &__container {
+    @include mx.flex-center(column, no-wrap);
+    text-align: center;
+
+    @include mx.respond-to(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    font-size: f.get-color(large);
+    margin-bottom: 1rem;
+
+    @include mx.respond-to(medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .payment-icon {
+    width: 100px;
+    height: auto;
+
+    @include mx.respond-to(medium) {
+      width: 60px;
+    }
+  }
+}
