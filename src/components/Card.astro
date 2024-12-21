@@ -4,15 +4,20 @@ import "../styles/components/_card.scss";
 export interface Props {
     title:string;
     description:string;
+    url:string;
+    alt:string;
 }
 
 const {
     title, 
-    description
+    description,
+    url,
+    alt
 } = Astro.props;
 ---
 
 <div class="card">
+    <img src={url} alt={alt} class="card__image">
     <h2>{title}</h2>
     <p>{description}</p>
 </div>

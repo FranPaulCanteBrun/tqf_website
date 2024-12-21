@@ -37,7 +37,7 @@ a {
   }
 
   &:focus {
-    outline: 2px dashed f.get-color(accent-dark);
+    outline: 2px none f.get-color(accent-dark);
   }
 }
 

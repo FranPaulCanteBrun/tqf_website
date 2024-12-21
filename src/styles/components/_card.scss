@@ -1,4 +1,5 @@
 @use "../utilities/functions" as f;
+@use "../utilities/mixins" as mx;
 
 .card {
   border: 1px solid f.get-color(neutral);
@@ -6,4 +7,32 @@
   text-align: center;
   border-radius: 5px;
   background-color: f.get-color(secondary);
+  transition: all 0.3s ease;
+
+  @include mx.respond-to(medium) {
+    padding: 0.5rem;
+    border-radius: 3px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    border-color: f.get-color(primary);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: f.get-color(neutral);
+    color: f.get-color(secondary);
+  }
 }

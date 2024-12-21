@@ -18,7 +18,7 @@
   }
 
   &__text {
-    font-size: f.get-color(large);
+    font-size: f.get-font(large);
     margin-bottom: 1rem;
 
     @include mx.respond-to(medium) {
@@ -28,7 +28,11 @@
 
   &__icons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+
+    @include mx.respond-to(medium) {
+      gap: 1rem;
+    }
   }
 
   .payment-icon {

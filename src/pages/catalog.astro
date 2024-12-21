@@ -4,9 +4,58 @@ import Card from "../components/Card.astro";
 ---
 
 <BaseLayout>
-    <h1>Floor Catalog</h1>
     <section class="catalog">
-        <Card title="Wood Floor" description="Sturdy and elegant."/>
-        <Card title="Ceramic Floor" description="Durable and easy to clean."/>
+        <div class="catalog__grid">
+            <div class="catalog__item">
+                <img src="/wooden_floor.webp" alt="" class="catalog__image">
+                <h3 class="catalog__title">Wooden Floor</h3>
+                <p class="catalog__description"><em>Made from natural wood, offering a warm and timeless appearance. It can include both solid wood and engineered wood options.</em></p>
+                <ul class="catalog__features">
+                    <li><strong>Advantages:</strong> Durable, versatile, and can be refinished multiple times.</li>
+                    <li><strong>Recommended For:</strong> Living rooms, bedrooms, and dining areas.</li>
+                </ul>
+                <button class="catalog__button">Get a Quote</button>
+            </div>
+            <div class="catalog__item">
+                <img src="/hardwood_floor.webp" alt="" class="catalog__image">
+                <h3 class="catalog__title">Hardwood Floor</h3>
+                <p class="catalog__description"><em>A premium type of wooden flooring made from solid hardwood, such as oak, maple, or walnut.</em></p>
+                <ul class="catalog__features">
+                    <li><strong>Advantages:</strong> Highly durable, long-lasting, and adds property value.</li>
+                    <li><strong>Recommended For:</strong> High-traffic areas like hallways, living rooms, and bedrooms.</li>
+                </ul>
+                <button class="catalog__button">Get a Quote</button>
+            </div>
+            <div class="catalog__item">
+                <img src="/tile_floor.webp" alt="" class="catalog__image">
+                <h3 class="catalog__title">Tile Floor</h3>
+                <p class="catalog__description"><em>Flooring made of ceramic, porcelain, or stone tiles, providing a hard, water-resistant surface.</em></p>
+                <ul class="catalog__features">
+                    <li><strong>Advantages:</strong> Waterproof, easy to clean, and available in many styles and designs.</li>
+                    <li><strong>Recommended For:</strong> Kitchens, bathrooms, and outdoor spaces.</li>
+                </ul>
+                <button class="catalog__button">Get a Quote</button>
+            </div>
+            <div class="catalog__item">
+                <img src="/lvp_floor.webp" alt="" class="catalog__image">
+                <h3 class="catalog__title">LVP Floor</h3>
+                <p class="catalog__description"><em>Synthetic flooring that mimics the look of wood or stone but is made of durable vinyl.</em></p>
+                <ul class="catalog__features">
+                    <li><strong>Advantages:</strong> Waterproof, affordable, low maintenance, and easy to install.</li>
+                    <li><strong>Recommended For:</strong> Basements, bathrooms, kitchens, and high-traffic areas.</li>
+                </ul>
+                <button class="catalog__button">Get a Quote</button>
+            </div>
+            <div class="catalog__item">
+                <img src="/carpet_floor.webp" alt="" class="catalog__image">
+                <h3 class="catalog__title">LVP Floor</h3>
+                <p class="catalog__description"><em>Soft and warm flooring made from woven fibers like wool, nylon, or polyester.</em></p>
+                <ul class="catalog__features">
+                    <li><strong>Advantages:</strong> Comfortable underfoot, sound-absorbing, and available in various textures and colors.</li>
+                    <li><strong>Recommended For:</strong> Bedrooms, living rooms, and offices.</li>
+                </ul>
+                <button class="catalog__button">Get a Quote</button>
+            </div>
+        </div>
     </section>
 </BaseLayout>

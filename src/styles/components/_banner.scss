@@ -8,6 +8,8 @@
   background-size: cover;
   background-position: center;
   height: 65vh;
+  width: auto;
+  background-color: f.get-color(neutral);
 
   &__overlay {
     @include mx.flex-center(column, no-wrap);
@@ -21,9 +23,14 @@
     font-size: f.get-font(heading);
     color: f.get-color(primary);
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
 
     span {
       color: f.get-color(secondary);
+    }
+
+    &:hover {
+      color: f.get-color(accent-dark);
     }
   }
 }
