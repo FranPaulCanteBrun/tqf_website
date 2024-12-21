@@ -6,7 +6,8 @@ import logo from "../assets/logo-topqualityflooring.webp";
 <nav class="navbar">
     <div class="navbar__container">
         <a href="/" class="navbar__logo"><Image src={logo} alt="Logo Top Quality Flooring" width={70}/></a>
-        <ul class="navbar__menu">
+        <button id="navbar-toggle" class="navbar__toggle" aria-label="Toggle Menu">☰</button>
+        <ul id="navbar-menu" class="navbar__menu">
             <li><a href="/">Home</a></li>
             <li><a href="/catalog">Catalog</a></li>
             <li><a href="/flooring">Flooring</a></li>
@@ -15,3 +16,5 @@ import logo from "../assets/logo-topqualityflooring.webp";
         </ul>
     </div>
 </nav>
+
+<script type="module" src="../scripts/navbar.js"></script>
