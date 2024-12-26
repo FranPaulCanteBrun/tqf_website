@@ -1,0 +1,44 @@
+---
+import "../styles/pages/_flooring.scss";
+import { Image } from "astro:assets";
+import floorImg1 from "../assets/step1-preparation.webp";
+import floorImg2 from "../assets/step2-installation.webp";
+import floorImg3 from "../assets/step3-polishing.webp";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <section class="flooring">
+        <header class="flooring__header">
+            <h1>Professional Flooring Installation Services</h1>
+            <p>We don't just sell floors, we make sure they're perfectly installed!</p>
+        </header>
+
+        <section class="flooring__steps">
+            <h2>Our Installation Process</h2>
+            <div class="flooring__grid">
+                <div class="flooring__step">
+                    <Image src={floorImg1} alt="Preparing the surface" class="flooring__image" />
+                    <h3>Step 1: Preparation</h3>
+                    <p>We prepare your floors by cleaning and leveling the surface for a smooth installation.</p>
+                </div>
+                <div class="flooring__step">
+                    <Image src={floorImg2} alt="Installing the flooring" class="flooring__image"/>
+                    <h3>Step 2: Installation</h3>
+                    <p>Our team installs the flooring with precision and care to ensure durability</p>
+                </div>
+                <div class="flooring__step">
+                    <Image src={floorImg3} alt="Finishing touches" class="flooring__image"/>
+                    <h3>Step 3: Finishing touches</h3>
+                    <p>We finish with trim, polishing, and cleaning to deliver a flawless result.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="flooring__cta">
+            <h2>Get a Free Quote Today!</h2>
+            <p>Contact us now to get a free estimate for your flooring installation</p>
+            <button class="flooring__button" onclick="location.href='/contact'">Request a Quote</button>
+        </section>
+    </section>
+</BaseLayout>

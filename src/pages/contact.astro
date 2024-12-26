@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import qrCode from "../assets/qr-contact.webp";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/pages/_contact.scss";
+---
+
+<BaseLayout>
+    <section class="contact">
+        <h2 class="contact__intro">Get in Touch</h2>
+        <header class="contact__header">
+            <h1>Contact Us</h1>
+            <p>We are here to assit you with any inquiries or requests!</p>
+        </header>
+
+        <!-- Form -->
+        <section class="contact__form">
+            
+            <form id="contact-form" class="contact__form-container" method="post" action="http://localhost:5000/api/send-email" >
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select name="subject" id="subject" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="quote">Request a Quote</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="inquiry">Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="message-container" style="display: none;">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Type your message"></textarea>
+            </div>
+
+            <button class="contact__button" type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- QR Code -->
+        <section class="contact__qr">
+            <h2>Contact Us Quickly</h2>
+            <p>Scan the QR code below or tap to call us directly!</p>
+            <a href="tel:+8435404324">
+                <Image src={qrCode} alt="Contact QR Code" class:list="contact__qr-image" />
+            </a>
+        </section>
+
+        <!-- Map -->
+        <!-- <section class="contact__map">
+            <h2>Visit Us</h2>
+            <p>Find our location and get directions!</p>
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Top+Quality+Flooring,South+Carolina"
+                width="100%" 
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section> -->
+    </section>
+
+    <!-- Script to show message textarea -->
+<script defer src="/scripts/contactForm.js"></script>
+</BaseLayout>

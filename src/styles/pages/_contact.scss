@@ -1,0 +1,227 @@
+@use "../utilities/functions" as f;
+@use "../utilities/mixins" as mx;
+
+.contact {
+  padding: 2rem;
+  color: f.get-color(neutral-dark);
+
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: f.get-font(x-large);
+      color: f.get-color(primary);
+    }
+
+    p {
+      font-size: f.get-font(base);
+    }
+  }
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: f.get-font(large);
+    color: f.get-color(accent);
+  }
+
+  &__form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 0.75rem;
+        border: 1px solid f.get-color(neutral-light);
+        border-radius: 5px;
+        background-color: f.get-color(secondary);
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: f.get-color(accent);
+          box-shadow: 0 0 5px f.get-color(accent);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+
+      input:invalid,
+      select:invalid,
+      textarea:invalid {
+        border-color: rgb(195, 0, 0);
+      }
+
+      input:valid,
+      select:valid,
+      textarea:valid {
+        border-color: green;
+      }
+    }
+  }
+
+  #message-container {
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    display: none;
+  }
+
+  #message-container.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__form-container select {
+    appearance: none;
+    background-color: f.get-color(secondary);
+    border: 1px solid f.get-color(neutral-dark);
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: f.get-color(neutral-light);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: f.get-color(accent);
+    }
+  }
+
+  &__form-container select option {
+    background-color: f.get-color(secondary);
+    color: f.get-color(neutral-dark);
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: f.get-color(accent);
+      color: f.get-color(secondary);
+    }
+  }
+
+  &__form-container textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 0.75rem;
+    border: 1px solid f.get-color(neutral-dark);
+    border-radius: 5px;
+    resize: vertical;
+    font-size: f.get-font(base);
+    background-color: f.get-color(secondary);
+
+    &:focus {
+      outline: none;
+      border-color: f.get-color(accent);
+      box-shadow: 0 0 5px f.get-color(accent);
+    }
+  }
+
+  &__button {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: f.get-color(accent);
+    color: f.get-color(secondary);
+    font-size: f.get-font(base);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: f.get-color(accent-dark);
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__qr {
+    text-align: center;
+    margin: 2rem 0;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      width: 150px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+
+  &__map {
+    margin-top: 2rem;
+    text-align: center;
+
+    iframe {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: f.get-color(accent);
+  color: f.get-color(secondary);
+  text-align: center;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// .contact__qr {
+//   margin: 2rem 0;
+//   text-align: center;
+
+//   h2 {
+//     margin-bottom: 1rem;
+//   }
+
+//   img,
+//   iframe {
+//     border-radius: 8px; // Bordes redondeados
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra ligera
+//   }
+// }
